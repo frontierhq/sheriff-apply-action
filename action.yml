@@ -8,7 +8,7 @@ inputs:
   mode:
     description: "Resources or groups"
     required: true
-  planOlny:
+  planOnly:
     description: "Plan only, do not apply"
     default: 'false'
     required: false
