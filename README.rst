@@ -26,17 +26,21 @@ on ``groups`` or ``resources``. The ``subscriptionId`` is the Azure subscription
 
 .. code:: yaml
 
-  - name: Log in with Azure
+  steps:
+    - name: Setup Sheriff
+      uses: gofrontier-com/sheriff-setup-action@main
+
+    - name: Log in with Azure
       uses: azure/login@v1
       with:
         creds: '${{ secrets.AZURE_CREDENTIALS }}'
 
-  - name: Sheriff Apply
-    uses: gofrontier-com/sheriff-apply-action@initial-work
-    with:
-      configDir: config/resources
-      mode: resources
-      subscriptionId: '${{ secrets.SUBSCRIPTION_ID }}'
+    - name: Sheriff Apply
+      uses: gofrontier-com/sheriff-apply-action@initial-work
+      with:
+        configDir: config/resources
+        mode: resources
+        subscriptionId: '${{ secrets.SUBSCRIPTION_ID }}'
 
 ------------
 Contributing
