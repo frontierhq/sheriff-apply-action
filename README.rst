@@ -20,10 +20,6 @@ using desired state configuration.
 Usage
 -----
 
-~~~~~~~~~~~~~~~~~~~~~~
-Sheriff Apply action
-~~~~~~~~~~~~~~~~~~~~~~
-
 This task runs the apply action of Sheriff CLI on the agent. The ``configDir`` will point to
 the location of the configuration files. Mode describes whether Sheriff will perform the actions
 on ``groups`` or ``resources``. The ``subscriptionId`` is the Azure subscription ID.
