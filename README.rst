@@ -28,7 +28,7 @@ on ``groups`` or ``resources``. The ``subscriptionId`` is the Azure subscription
 
   steps:
     - name: Setup Sheriff
-      uses: gofrontier-com/sheriff-setup-action@main
+      uses: gofrontier-com/sheriff-setup-action@v1
 
     - name: Log in with Azure
       uses: azure/login@v1
@@ -36,7 +36,7 @@ on ``groups`` or ``resources``. The ``subscriptionId`` is the Azure subscription
         creds: '${{ secrets.AZURE_CREDENTIALS }}'
 
     - name: Sheriff Apply
-      uses: gofrontier-com/sheriff-apply-action@initial-work
+      uses: gofrontier-com/sheriff-apply-action@v1
       with:
         configDir: config/resources
         mode: resources
