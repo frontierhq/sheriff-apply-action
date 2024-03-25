@@ -20,8 +20,8 @@ using desired state configuration.
 Usage
 -----
 
-This task runs the apply action of Sheriff CLI on the agent. The ``configDir`` will point to
-the location of the configuration files. Mode describes whether Sheriff will perform the actions
+This task runs the apply action of Sheriff CLI on the agent. The ``configDir`` input will point to
+the location of the configuration files. The ``mode`` input describes whether Sheriff will perform the actions
 on ``groups`` or ``resources``. The ``subscriptionId`` is the Azure subscription ID.
 
 .. code:: yaml
