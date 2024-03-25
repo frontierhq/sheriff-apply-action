@@ -3,9 +3,9 @@
   :alt: Sheriff logo
   :align: center
 
-===================
+====================
 Sheriff Apply Action
-===================
+====================
 
 -----
 About
