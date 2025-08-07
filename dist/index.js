@@ -27847,7 +27847,7 @@ async function run() {
     const mode = core.getInput('mode');
     const planOnly = (core.getInput('planOnly') === 'true');
     const subscriptionId = core.getInput('subscriptionId');
-    const autoApprove = (core.getInput('autoApprove') || 'true') === 'true';
+    const autoApprove = (core.getInput('autoApprove', false) === 'true');
     await exec.exec(
       '/tmp/sheriff/latest/x86_64/sheriff',
       [
