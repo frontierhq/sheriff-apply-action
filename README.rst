@@ -12,7 +12,7 @@ About
 -----
 
 This is a Github Action that provides an interface to the ``apply`` action for
-`Sheriff <https://github.com/gofrontier-com/sheriff>`_, a command line tool to
+`Sheriff <https://github.com/frontierhq/sheriff>`_, a command line tool to
 manage Microsoft Entra Privileged Identity Management (Microsoft Entra PIM)
 using desired state configuration.
 
@@ -28,7 +28,7 @@ on ``groups`` or ``resources``. The ``subscriptionId`` is the Azure subscription
 
   steps:
     - name: Setup Sheriff
-      uses: gofrontier-com/sheriff-setup-action@v1
+      uses: frontierhq/sheriff-setup-action@v1
 
     - name: Log in with Azure
       uses: azure/login@v1
@@ -36,7 +36,7 @@ on ``groups`` or ``resources``. The ``subscriptionId`` is the Azure subscription
         creds: '${{ secrets.AZURE_CREDENTIALS }}'
 
     - name: Sheriff Apply
-      uses: gofrontier-com/sheriff-apply-action@v1
+      uses: frontierhq/sheriff-apply-action@v1
       with:
         configDir: config/resources
         mode: resources
@@ -46,4 +46,4 @@ on ``groups`` or ``resources``. The ``subscriptionId`` is the Azure subscription
 Contributing
 ------------
 
-We welcome contributions to this repository. Please see `CONTRIBUTING.md <https://github.com/gofrontier-com/sheriff-apply-action/tree/main/CONTRIBUTING.md>`_ for more information.
+We welcome contributions to this repository. Please see `CONTRIBUTING.md <https://github.com/frontierhq/sheriff-apply-action/tree/main/CONTRIBUTING.md>`_ for more information.

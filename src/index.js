@@ -9,7 +9,7 @@ async function run() {
     const mode = core.getInput('mode');
     const planOnly = (core.getInput('planOnly') === 'true');
     const subscriptionId = core.getInput('subscriptionId');
-
+    const autoApprove = (core.getInput('autoApprove') || 'true') === 'true';
     await exec.exec(
       '/tmp/sheriff/latest/x86_64/sheriff',
       [
@@ -20,6 +20,7 @@ async function run() {
         '--subscription-id',
         subscriptionId,
         planOnly ? '--plan-only' : '',
+        autoApprove ? '--auto-approve' : '',
       ],
     );
   } catch (err) {
